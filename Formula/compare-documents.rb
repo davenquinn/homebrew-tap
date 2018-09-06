@@ -6,6 +6,8 @@ class CompareDocuments < Formula
 
   def install
     bin.install "bin/compare-documents"
-    prefix.install "script/compare-documents.scpt", "script/compare-documents.scpt"
+    script=prefix+"script"
+    mkdir_p script
+    script.install "script/compare-documents.scpt"
   end
 end
